@@ -1,0 +1,34 @@
+{
+  "name": "gulp-jade-l10n-extractor",
+  "version": "1.0.0",
+  "description": "Extracts l10n strings from jade files to a gettext .pot file",
+  "license": "MIT",
+  "repository": "vhpoet/gulp-jade-l10n-extractor",
+  "author": {
+    "name": "Vahe Hovhannisyan",
+    "email": "vhpoet@gmail.com",
+    "url": "http://vahehovhannisyan.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "gulpplugin",
+    "l10n",
+    "i18n",
+    "language",
+    "internationalization",
+    "localization",
+    "translation",
+    "jade"
+  ],
+  "dependencies": {
+    "gulp-util": "^3.0.4",
+    "jade": "^1.9.2",
+    "node-po": "^0.1.2",
+    "through2": "^0.6.5"
+  }
+}
