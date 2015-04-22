@@ -4,6 +4,7 @@ var PluginError = gutil.PluginError;
 var path = require('path');
 var jadeParser = require('jade').Parser;
 var PO = require('node-po');
+var extend = require('util')._extend;
 
 // consts
 const PLUGIN_NAME = 'gulp-jade-l10n-extractor';
@@ -127,7 +128,11 @@ module.exports = function(options) {
       try {
         var parser = new jadeParser(file.contents.toString(), file.path);
         var doc = parser.parse();
+      } catch (e) {
+        return cb(new PluginError(PLUGIN_NAME, e.message + ' File: ' + file.path));
+      }
 
+      try {
         messages = messages
           .concat(processBlock(doc, file))
           .filter(function (msg) {
