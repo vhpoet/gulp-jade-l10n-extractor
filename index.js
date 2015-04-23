@@ -178,7 +178,7 @@ module.exports = function(options) {
 
     // tell the stream engine that we are done with this file
     cb();
-  }, function (){
+  }, function(cb) {
     var languageFile = new gutil.File({
       path: options.filename,
       contents: new Buffer(fileHeader + po.toString())
@@ -186,6 +186,7 @@ module.exports = function(options) {
 
     log('Imported l10n strings: ', messagesCount);
     stream.push(languageFile);
+    cb();
   });
 
   // returning the file stream
