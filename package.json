@@ -1,6 +1,6 @@
 {
   "name": "gulp-jade-l10n-extractor",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Extracts l10n strings from jade files to a gettext .pot file",
   "license": "MIT",
   "repository": "vhpoet/gulp-jade-l10n-extractor",
